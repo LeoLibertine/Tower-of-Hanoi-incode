@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#debug {
+  display: none;
+  margin: 5em 0 0 5em;;
+}
+
+#debug * {
+  padding: 0.1em;
+}
+
+#resultados {
+  position:absolute;
+  left: 60%;
+  top: 35%;
+  width: 100%;
+  height: 100%;
+
+}
+#incode {
+  position:absolute;
+  left: 15%;
+  top: 10%;
+
+}
+#Resultado3-notification {
+  position:absolute;
+  left: 60%;
+  top: 55%;
+  width: 100%;
+  height: 100%;
+
+}
+
+#victory-message{
+  position:absolute;
+  left: 18%;
+  top: 60%;
+  width: 40%;
+  height: 50%;
+
+
+}
+
+#introduction {
+  position: absolute;
+  left: 18%;
+  top: 35%;
+  width: 50%;
+  height: 10%;
+
+}
+
+#introduction-message, #victory-message {
+  background-color: #fff;
+}
+
+#introduction-message {
+  
+  width: 30em;
+  /* TODO: remove hardcoded value for margin-top. */
+  
+}
+
+#introduction-message > p {
+  margin-top: 0.4em;
+  margin-bottom: 1.3em;
+}
+
+
+
+#victory-notification,#Resultado-message, #Resultado-message2 {
+  display: none;
+}
+
+input {
+  border: solid 1px #333;
+  background-color: #dedede;
+  padding: 0.2em;
+}
+
+#torre-A {
+  position:absolute;
+  left: 38%;
+  top: 3%;
+  width: 10%;
+  height: 10%;
+
+}
+#torre-B {
+  position:absolute;
+  left: 47%;
+  top: 3%;
+  width: 10%;
+  height: 10%;
+
+}
+#torre-C {
+  position:absolute;
+  left: 56%;
+  top: 3%;
+  width: 10%;
+  height: 10%;
+
+}
