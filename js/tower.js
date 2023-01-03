@@ -47,6 +47,7 @@ Tower.prototype.draw_self = function() {
 Tower.prototype.draw_disks = function() {
   for(i in this.disks)
     this.disks[i].draw();
+    
 }
 
 Tower.prototype.get_top_disk = function() {

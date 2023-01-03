@@ -1,33 +1,57 @@
 var resultado="";
+var i=0;
+
 
 
 function HanoiTower(){
+    //inicializamos variables
+    const disco=document.getElementById('disks-count');
+    var discos=disco.value;
+   
+    if (isNaN(parseInt(discos))){
+       alert("por favor introduce un número de discos correcto");
+       return;
+    }
+    i=0;
     resultado="";
+    var colorDisco= ["verde","azul","rosa","naranja","gris","morado","rojo","amarillo","café"];
     var resultadoFinal=document.getElementById('Resultado-message');
     //Hacemos visible el resultado
     resultadoFinal.innerHTML="";
     resultadoFinal.style.display="inline";
     resultadoFinal.innerHTML="";
-    const disco=document.getElementById('discos');
-    var discos=disco.value;
+    
    resultadoFinal.innerHTML="<h4>Resultado " + discos + " Discos</h4>";
+   colorDisco.splice(discos, colorDisco.length-discos);
+   var colores=colorDisco.reverse();
    resultadoFinal.innerHTML=resultadoFinal.innerHTML + resultado;
-   HanoiTowerFinal(discos, "A", "C", "B");
+   HanoiTowerFinal(discos, "1", "3", "2",colores);
    resultadoFinal.innerHTML=resultadoFinal.innerHTML + resultado;
 
 
     
 }
-function HanoiTowerFinal(discos, torreOrigen, torreDestino, torreApoyo){
+function HanoiTowerFinal(discos, torreOrigen, torreDestino, torreApoyo, colores){
+    
     
    
     if (discos == 1)
     {
-        resultado = resultado + " <p>Mueve disco 1 desde torre " +  torreOrigen + " a torre " + torreDestino+"</p> ";
+        if (i==0){
+            i++
+        }
+
+        resultado = resultado + " <p> "+ i.toString()+ ". Mueve disco " + colores[discos-1].toString() + " desde torre " +  torreOrigen + " a torre " + torreDestino+"</p> ";
+        i++;
         return;
     }
-    HanoiTowerFinal(discos-1, torreOrigen, torreApoyo, torreDestino);
-    resultado = resultado + " <p>Mueve disco " + discos + " desde torre " +  torreOrigen+ " a torre " + torreDestino+ "</p> ";
-    HanoiTowerFinal(discos-1, torreApoyo, torreDestino, torreOrigen);
+    HanoiTowerFinal(discos-1, torreOrigen, torreApoyo, torreDestino, colores);
+    
+    if (i==0){
+        i++
+    }
+    resultado = resultado + " <p> " + i.toString()+ ". Mueve disco " + colores[discos-1].toString() + " desde torre " +  torreOrigen+ " a torre " + torreDestino+ "</p> ";
+    i++;
+    HanoiTowerFinal(discos-1, torreApoyo, torreDestino, torreOrigen, colores);
 
 }

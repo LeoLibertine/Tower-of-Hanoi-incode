@@ -8,7 +8,50 @@ function TowerManager(canvas, disks_count) {
 
 TowerManager.prototype.add_initial_disks = function() {
   var disk_widths = this.calculate_disk_widths();
-  while(width = disk_widths.pop()) new Disk(this.towers[0], width, Colour.random().toString());
+  //revisar colores
+  var i=0;
+  var color=Colour.random().toString();
+  
+  while(width = disk_widths.pop()) 
+  if (i==0) {
+    new Disk(this.towers[0], width, "rgb(71,236,22)");
+    i=i+1
+  }
+  else if (i==1) {
+    new Disk(this.towers[0], width, "rgb(22,106,236)");
+    i=i+1
+
+  }
+  else if (i==2) {
+    new Disk(this.towers[0], width, "rgb(236,22,213)");
+    i=i+1
+  }
+  else if (i==3) {
+    new Disk(this.towers[0], width, "rgb(242,172,40)");
+    i=i+1
+  }
+  else if (i==4) {
+    new Disk(this.towers[0], width, "rgb(146,143,137)");
+    i=i+1
+  }
+  else if (i==5) {
+    new Disk(this.towers[0], width, "rgb(73,60,169)");
+    i=i+1
+  }
+  else if (i==6) {
+    new Disk(this.towers[0], width, "rgb(227,21,80)");
+    i=i+1
+  }
+  else if (i==7) {
+    new Disk(this.towers[0], width, "rgb(244,247,14)");
+    i=i+1
+  }
+  else {
+    new Disk(this.towers[0], width, "rgb(100,92,30)");
+    i=i+1
+
+  }
+  
 }
 
 TowerManager.prototype.draw = function() {
