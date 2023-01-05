@@ -9,7 +9,7 @@ function HanoiTower(){
     var discos=disco.value;
    
     if (isNaN(parseInt(discos))){
-       alert("por favor introduce un número de discos correcto");
+       alert("please enter a correct number of discs");
        return;
     }
     i=0;
@@ -25,7 +25,7 @@ function HanoiTower(){
    colorDisco.splice(discos, colorDisco.length-discos);
    var colores=colorDisco.reverse();
    resultadoFinal.innerHTML=resultadoFinal.innerHTML + resultado;
-   HanoiTowerFinal(discos, "1", "3", "2",colores);
+   HanoiTowerFinal(discos, "A", "C", "B",colores);
    resultadoFinal.innerHTML=resultadoFinal.innerHTML + resultado;
 
 
@@ -41,7 +41,7 @@ function HanoiTowerFinal(discos, torreOrigen, torreDestino, torreApoyo, colores)
             i++
         }
 
-        resultado = resultado + " <p> "+ i.toString()+ ". Move disk " + colores[discos-1].toString() + " from tower " +  torreOrigen + " to tower " + torreDestino+"</p> ";
+        resultado = resultado + " <p> "+ i.toString()+ ". Take disk " + colores[discos-1].toString() + " from rod " +  torreOrigen + " to rod " + torreDestino+"</p> ";
         i++;
         return;
     }
@@ -50,7 +50,7 @@ function HanoiTowerFinal(discos, torreOrigen, torreDestino, torreApoyo, colores)
     if (i==0){
         i++
     }
-    resultado = resultado + " <p> " + i.toString()+ ". Move disk " + colores[discos-1].toString() + " from tower " +  torreOrigen+ " to tower " + torreDestino+ "</p> ";
+    resultado = resultado + " <p> " + i.toString()+ ". Take disk " + colores[discos-1].toString() + " from rod " +  torreOrigen+ " to rod " + torreDestino+ "</p> ";
     i++;
     HanoiTowerFinal(discos-1, torreApoyo, torreDestino, torreOrigen, colores);
 
