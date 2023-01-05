@@ -14,14 +14,14 @@ function HanoiTower(){
     }
     i=0;
     resultado="";
-    var colorDisco= ["verde","azul","rosa","naranja","gris","morado","rojo","amarillo","café"];
+    var colorDisco= ["green","blue","pink","orage","grey","purple","red","yellow","brown"];
     var resultadoFinal=document.getElementById('Resultado-message');
     //Hacemos visible el resultado
     resultadoFinal.innerHTML="";
     resultadoFinal.style.display="inline";
     resultadoFinal.innerHTML="";
     
-   resultadoFinal.innerHTML="<h4>Resultado " + discos + " Discos</h4>";
+   resultadoFinal.innerHTML="<h4>Result " + discos + " Disks</h4>";
    colorDisco.splice(discos, colorDisco.length-discos);
    var colores=colorDisco.reverse();
    resultadoFinal.innerHTML=resultadoFinal.innerHTML + resultado;
@@ -41,7 +41,7 @@ function HanoiTowerFinal(discos, torreOrigen, torreDestino, torreApoyo, colores)
             i++
         }
 
-        resultado = resultado + " <p> "+ i.toString()+ ". Mueve disco " + colores[discos-1].toString() + " desde torre " +  torreOrigen + " a torre " + torreDestino+"</p> ";
+        resultado = resultado + " <p> "+ i.toString()+ ". Move disk " + colores[discos-1].toString() + " from tower " +  torreOrigen + " to tower " + torreDestino+"</p> ";
         i++;
         return;
     }
@@ -50,7 +50,7 @@ function HanoiTowerFinal(discos, torreOrigen, torreDestino, torreApoyo, colores)
     if (i==0){
         i++
     }
-    resultado = resultado + " <p> " + i.toString()+ ". Mueve disco " + colores[discos-1].toString() + " desde torre " +  torreOrigen+ " a torre " + torreDestino+ "</p> ";
+    resultado = resultado + " <p> " + i.toString()+ ". Move disk " + colores[discos-1].toString() + " from tower " +  torreOrigen+ " to tower " + torreDestino+ "</p> ";
     i++;
     HanoiTowerFinal(discos-1, torreApoyo, torreDestino, torreOrigen, colores);
 

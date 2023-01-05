@@ -8,7 +8,7 @@ function init() {
     var discos=disco.value;
  
   if (isNaN(parseInt(discos))){
-     alert("por favor introduce un número de discos correcto 2");
+     alert("please enter a correct number of disks ");
      return;
   }
     document.getElementById('introduction').style.display = 'none';
